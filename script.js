@@ -52,7 +52,7 @@ const winner = () => {
     }
     if (comWinner) {
         setTimeout(() => {
-            winnerResult.innerHTML = `COMPUTADOR GANHOU, VOCÊ PERDEU ='(`
+            winnerResult.innerHTML = ` COMPUTADOR GANHOU,VOCÊ PERDEU =(`
         }, 3500);
     }
     if (playerWinner) {
