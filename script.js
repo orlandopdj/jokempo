@@ -48,17 +48,17 @@ const winner = () => {
     if (com === player) {
         setTimeout(() => {
             winnerResult.innerHTML = `EMPATE!`
-        }, 3000);
+        }, 3500);
     }
     if (comWinner) {
         setTimeout(() => {
             winnerResult.innerHTML = `COMPUTADOR GANHOU, VOCÊ PERDEU ='(`
-        }, 3000);
+        }, 3500);
     }
     if (playerWinner) {
         setTimeout(() => {
             winnerResult.innerHTML = `Você GANHOU!!`
-        }, 3000);
+        }, 3500);
     }
 }
 
