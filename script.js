@@ -18,7 +18,7 @@ button.addEventListener('click', () => {
 
     setTimeout(() => {
         comItem.innerHTML = `<span>${comResul}</span>`
-    }, 3000);
+    }, 2200);
     winner()
     jokerTimer()
 })
@@ -31,13 +31,13 @@ const comJogada = () => {
 const jokerTimer = () => {
     setTimeout(() => {
         jokempo.innerHTML = `JO... `
-    }, 1000);
+    }, 100);
     setTimeout(() => {
-        jokempo.innerHTML += `KEM...`
-    }, 2000);
+        jokempo.innerHTML += `KEN...`
+    }, 1100);
     setTimeout(() => {
-        jokempo.innerHTML += `PO...`
-    }, 3000);
+        jokempo.innerHTML += `PÔ...`
+    }, 2100);
 }
 
 const winner = () => {
@@ -48,17 +48,17 @@ const winner = () => {
     if (com === player) {
         setTimeout(() => {
             winnerResult.innerHTML = `EMPATE!`
-        }, 3500);
+        }, 2200);
     }
     if (comWinner) {
         setTimeout(() => {
             winnerResult.innerHTML = ` COMPUTADOR GANHOU,VOCÊ PERDEU =(`
-        }, 3500);
+        }, 2200);
     }
     if (playerWinner) {
         setTimeout(() => {
             winnerResult.innerHTML = `Você GANHOU!!`
-        }, 3500);
+        }, 2200);
     }
 }
 
