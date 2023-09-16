@@ -10,18 +10,27 @@ let minhaJogada = null
 let items = ['Pedra', 'Papel', 'Tesoura']
 
 button.addEventListener('click', () => {
+    const jkp = document.querySelector('.jokempo')
+
+    if(winnerResult.textContent.length) {
+        limparContent()
+    }
+    if(!jkp.textContent.length) {
+        comResul = comJogada()
+        minhaJogada = select.value
+        winner()
+        jokerTimer()
+        setTimeout(() => {
+            comItem.innerHTML = `<span>${comResul}</span>`
+        }, 2200);
+    }
+})
+
+const limparContent = () => {
     comItem.innerHTML = ''
     winnerResult.innerHTML = ''
     jokempo.innerHTML = ''
-    comResul = comJogada()
-    minhaJogada = select.value
-
-    setTimeout(() => {
-        comItem.innerHTML = `<span>${comResul}</span>`
-    }, 2200);
-    winner()
-    jokerTimer()
-})
+}
 
 const comJogada = () => {
     let index = Math.floor(Math.random() * items.length)
@@ -29,15 +38,15 @@ const comJogada = () => {
 }
 
 const jokerTimer = () => {
-    setTimeout(() => {
-        jokempo.innerHTML = `JO... `
-    }, 100);
-    setTimeout(() => {
-        jokempo.innerHTML += `KEN...`
-    }, 1100);
-    setTimeout(() => {
-        jokempo.innerHTML += `PÔ...`
-    }, 2100);
+        setTimeout(() => {
+            jokempo.innerHTML = `JO... `
+        }, 100);
+        setTimeout(() => {
+            jokempo.innerHTML += `KEN...`
+        }, 1100);
+        setTimeout(() => {
+            jokempo.innerHTML += `PÔ...`
+        }, 2100);
 }
 
 const winner = () => {
